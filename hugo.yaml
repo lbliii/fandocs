@@ -1,0 +1,23 @@
+baseURL: "/"
+title: FanDocs
+
+enableGitInfo: true 
+enableEmoji: true 
+enableRobotsTXT: true 
+
+theme: hugo-emdash
+
+outputs: 
+  home: [ "HTML", "JSON", "RSS"]
+  page: [ "HTML", "JSON", "RSS"]
+  section: [ "HTML", "JSON", "RSS"]
+  list: [ "HTML", "JSON", "RSS"]
+  taxonomies: [ "HTML", "JSON", "RSS"]
+
+sitemap:
+  changeFreq: monthly 
+  fileName: sitemap.xml 
+  priority: 0.8 
+
+taxonomies:
+  tag: tags 

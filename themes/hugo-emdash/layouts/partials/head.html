@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="title" content="{{with .Parent}}{{.Title}}{{end}}: {{ .Title }}" />
+<meta name="description" content="{{ .Description }}" />
+<meta name="keywords" content="{{ .Keywords }}" />
+<meta name="author" content="{{ .Params.author }}" />
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+
+{{/*  themes/pach-emdash/assets/css/..  */}}
+{{ $emdash := resources.Get "css/emdash.css" | resources.Minify }}
+
+{{/*  Aggregates minified css into one resource  */}}
+{{ $css := slice $emdash | resources.Concat "css/bundle.css"}}
+<link rel="stylesheet" href="{{ $css.Permalink }}" media="screen" />
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+<title>Hugo FanDocs: {{.Title}}</title>
