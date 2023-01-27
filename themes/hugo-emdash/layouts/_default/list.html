@@ -1,0 +1,7 @@
+{{ define "main" }}
+    <div class="c-sp-4">
+    {{.Content}}
+    {{ partial "childPages.html" . }}
+    </div>
+    {{ partial "nextPrev.html" . }}
+{{ end }}

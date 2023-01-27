@@ -21,3 +21,10 @@ sitemap:
 
 taxonomies:
   tag: tags 
+
+
+params:
+  nextPrev: true
+  childPages: 
+    display: true # displays child pages of a section.
+    grandchildren: true # displays first 7 grandchildren as buttons in the card.
