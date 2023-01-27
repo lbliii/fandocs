@@ -11,23 +11,23 @@
     --xxsmall-text: calc((.5rem) + (.2vw));   
     --xsmall-text: calc((.75rem) + (.2vw));  
     --small-text: calc((1rem) + (.2vw));  
-    --medium-text: calc((1rem) + (1vw));
+    --medium-text: calc((1rem) + (.5vw));
     --large-text: calc((1rem) + (1.5vw));
     --xlarge-text: calc((1rem) + (2.3vw));
     --xxlarge-text: calc((1rem) + (3vw));
     --xxxlarge-text: calc((1rem) + (4vw));
 
-    --padding-1: 300;
-    --padding-2: 250;
-    --padding-3: 200;
-    --padding-4: 150;
+    --padding-1: 700;
+    --padding-2: 500;
+    --padding-3: 300;
+    --padding-4: 250;
     --padding-5: 100;
     --padding-6: 90;
-    --padding-7: 80;
-    --padding-8: 70;
-    --padding-9: 60;
-    --padding-10: 50;
-    --padding-11: 40;
+    --padding-7: 70;
+    --padding-8: 60;
+    --padding-9: 50;
+    --padding-10: 40;
+    --padding-11: 30;
 
     --margin-1: 100;
     --margin-2: 70;
@@ -141,7 +141,7 @@ a, aside, article, body, button, code, div, h1, h2, h3, h4, h5, h6, img, p, pre,
 a {
     text-decoration: none;
     color: var(--is-link-color);
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 a:hover, button:hover, .label:hover { opacity: 0.7; }
@@ -451,6 +451,54 @@ ul, ol { padding-inline-start: 1vw; }
 .opa-2 { opacity: 0.2; }
 
 .opa-3 { opacity: 0.3; }
+
+
+/* Border Image TODO: add to framework */
+
+.border-image-l {
+  border-width: 1px;
+  border-style: solid;
+  border-right: 0px;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0),
+      var(--is-gradient-cold-pt-1),
+      var(--is-gradient-cold-pt-2),
+      var(--is-gradient-cold-pt-3),
+      var(--is-gradient-cold-pt-4),
+      var(--is-gradient-cold-pt-5),
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.border-image-l-2 {
+  border-width: 1px;
+  border-style: solid;
+  border-right: 0px;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      rgba(0, 0, 0, 0),
+      var(--is-dark-gray),
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.border-image-r {
+  border-width: 1px;
+  border-style: solid;
+  border-left: 0px;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+
+
 
 /* Content */
 
@@ -1118,6 +1166,7 @@ h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover
 
 /*Global Padding*/
 
+
 .p-1, .c-p-1 > * {
   padding: calc(100vw / var(--padding-1));
 }
@@ -1539,7 +1588,7 @@ h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover
 .text-l {
     font-size: var(--large-text);
 }
-. text-xxl {
+.text-xl {
     font-size: var(--xlarge-text);
 }
 .text-xxl {
@@ -1616,7 +1665,7 @@ h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover
 /* Custom Fonts */
 
 .custom-font-1 {
- font-family: var(--custom-font-1);   
+ font-family: var(--custom-font-1);
 }
 .custom-font-2 {
  font-family: var(--custom-font-2);   

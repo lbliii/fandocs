@@ -3,23 +3,24 @@
 <nav id="sidebar" class="is-hidden-mobile"> 
     <ul>
         {{ range .Site.Sections }}
-
-        <li class="mb-1"><a href="{{.RelPermalink}}">{{ .Title }}</a>
-        
-            {{ if .Sections }}
-                {{ range .Sections }}
-                <li class="ml-2 mb-2 text-xs"><a href="{{.RelPermalink}}">{{ .Title }}</a>
-                
-                    {{ if .Sections }}
-                        {{ range .Sections }}
-                        <li class="ml-4 mb-2 text-xxs"><a href="{{.RelPermalink}}">{{ .Title }}</a></li>
-                        {{end}}
-                    {{ end }}
-                
-                </li>
-                {{end}}
-            {{ end }}
-        </li>
+        <div class="border-image-l-2 listless pl-6 mb-4">
+            <li class="mb-1"><a href="{{.RelPermalink}}">{{ .Title }}</a>
+            
+                {{ if .Sections }}
+                    {{ range .Sections }}
+                    <li class="ml-2 mb-2 text-xs"><a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    
+                        {{ if .Sections }}
+                            {{ range .Sections }}
+                            <li class="ml-4 mb-2 text-xxs"><a href="{{.RelPermalink}}">{{ .Title }}</a></li>
+                            {{end}}
+                        {{ end }}
+                    
+                    </li>
+                    {{end}}
+                {{ end }}
+            </li>
+        </div>
     
         {{ end }}
 
