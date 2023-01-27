@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
+    <body class="blue">
         {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
+        <div id="layout" class="c-sp-1 mx-5 my-2">
+            {{- partial "nav.html" . -}}
+            {{- partial "hero.html" . -}}
+            <section class="spread">
+                {{- partial "sidebar.html" . -}}
+                <span class="gradient-tb-cold w-2 m-1 shadow-l-1 shadow-r-1"></span>
+                <div id="content" class="is-three-fifths is-fullsize-mobile"> 
+                    {{- block "main" . }}{{- end }}
+                </div>
+                {{- partial "toc.html" . -}}
+            </section>
         </div>
         {{- partial "footer.html" . -}}
     </body>
