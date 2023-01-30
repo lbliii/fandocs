@@ -5,12 +5,12 @@
     --custom-font-2: "none";
     
     --is-header-line-height: 110%;
-    --is-text-ine-height: 150%;
+    --is-text-ine-height: 200%;
 
 
     --xxsmall-text: calc((.5rem) + (.2vw));   
     --xsmall-text: calc((.75rem) + (.2vw));  
-    --small-text: calc((1rem) + (.2vw));  
+    --small-text: calc((1rem) + (.1vw));  
     --medium-text: calc((1rem) + (.5vw));
     --large-text: calc((1rem) + (1.5vw));
     --xlarge-text: calc((1rem) + (2.3vw));
@@ -925,6 +925,10 @@ h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover
 }
 .outlined-white, .c-outlined-white > * {
     border: 1px solid #fff;
+}
+
+.outlined-dark-gray, .c-outlined-dark-gray > * {
+    border: 1px solid #333;
 }
 
 /* Scroll */

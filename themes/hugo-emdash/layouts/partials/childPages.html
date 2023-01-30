@@ -4,18 +4,18 @@
 
 {{ if .Site.Params.childPages.display}}
     {{if .Pages }}
-        <aside class="spread-around rounded-1 mt-5">
+        <aside class="spread-left rounded-1 mt-5">
             {{ range sort .Pages "Weight" "$order"}}
                 {{ if  .Params.hidden }}
                     {{/* Do not show the hidden child page or its descendants */}}
                 {{else}}
-                    <a href="{{.RelPermalink}}">
-                        <div class="rounded-5 gradient-lr-cold p-1 m-1 shadow-dl-1">
-                            <div class="outlined-white rounded-5 c-sp-1 blue"> 
-                                <h3 class="text-m">
+                    <a href="{{.RelPermalink}}" class="is-half">
+                        <div class=" rounded-5 gradient-lr-cold p-1 m-1 shadow-dl-1">
+                            <div class=" outlined-white rounded-5 c-sp-1 blue"> 
+                                <h3 class="text-s">
                                     {{.Title}}
                                 </h3>
-                                <p>
+                                <p class="text-xs">
                                     {{ if .Params.description }}
                                         {{ .Params.description }}
                                     {{ else }}
